@@ -16,13 +16,13 @@ This project requires Python 3 and the following non-standard libraries:
 Sample Gameplay:
 
 "
-=== Round 37 === (Round 37/40) Player has 4/5 Oopsie Daisies Left
-Playing base tone: F#4 (377.14 Hz)
-Playing detuned tone...
-Press UP for sharp, DOWN for flat, SPACE to replay the tones, or Q to quit.
-Direction: Correct!
-Guess the detune amount (in cents) 12.08 - 48.32 (or SPACE to replay the tones or 'q' to quit): 20
-Cents: Correct! Offset = 16.05
+=== Round 37 === (Round 37/40) Player has 4/5 Oopsie Daisies Left  
+Playing base tone: F#4 (377.14 Hz)  
+Playing detuned tone...  
+Press UP for sharp, DOWN for flat, SPACE to replay the tones, or Q to quit.  
+Direction: Correct!  
+Guess the detune amount (in cents) 12.08 - 48.32 (or SPACE to replay the tones or 'q' to quit): 20  
+Cents: Correct! Offset = 16.05  
 
 === Round 38 === (Round 38/40) Player has 4/5 Oopsie Daisies Left
 Playing base tone: A4 (440.00 Hz)
