@@ -121,8 +121,20 @@ def main():
     # List of possible base frequencies (from A2 ~110 Hz to A5 ~880 Hz)
     base_frequencies = np.linspace(110, 880, num=50)
 
+
     print("Welcome to the Ear Training Game!")
     print("There are 40 rounds. At any prompt, type 'q' to quit.\n")
+    # At the beginning of your main() function, prompt for difficulty:
+    difficulty = input("Choose difficulty (hard/medium/easy): ").strip().lower()
+    if difficulty == "hard":
+        decay = 0.90
+    elif difficulty == "medium":
+        decay = 0.94
+    elif difficulty == "easy":
+        decay = 0.98
+    else:
+        print("Invalid choice, defaulting to hard.")
+        decay = 0.90
     
     for round_number in range(max_rounds):
         current_round = round_number + 1
@@ -131,7 +143,7 @@ def main():
         base_freq = random.choice(base_frequencies)
         
         # Determine maximum detune offset (in cents) for this round
-        max_offset = 100 * (0.9 ** round_number)
+        max_offset = 100 * (decay ** round_number)
         if max_offset <= 2:
             lower_bound = 1
             upper_bound = 2
@@ -243,11 +255,11 @@ def main():
     print("\n=== Game Over ===")
     print(f"Rounds Played: {total_rounds}")
     print(f"Direction Score: {direction_score}/{total_rounds}")
-    print(f"Accuracy Score (Both correct): {accuracy_score}/{total_rounds}")
+    print(f"Accuracy Score : {accuracy_score}/{total_rounds}")
     direction_accuracy = (direction_score / total_rounds) * 100
     overall_accuracy = (accuracy_score / total_rounds) * 100
-    print(f"Direction Accuracy: {direction_accuracy:.0f}%")
-    print(f"Overall Accuracy: {overall_accuracy:.0f}%")
+    print(f"Direction Precision: {direction_accuracy:.0f}%")
+    print(f"Accuracy Precision: {overall_accuracy:.0f}%")
 
 if __name__ == "__main__":
     main()
