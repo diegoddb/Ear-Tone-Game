@@ -255,11 +255,11 @@ def main():
     print("\n=== Game Over ===")
     print(f"Rounds Played: {total_rounds}")
     print(f"Direction Score: {direction_score}/{total_rounds}")
-    print(f"Accuracy Score (Both correct): {accuracy_score}/{total_rounds}")
+    print(f"Distance Score (Both correct): {accuracy_score}/{total_rounds}")
     direction_accuracy = (direction_score / total_rounds) * 100
     overall_accuracy = (accuracy_score / total_rounds) * 100
     print(f"Direction Accuracy: {direction_accuracy:.0f}%")
-    print(f"Overall Accuracy: {overall_accuracy:.0f}%")
+    print(f"Distance Accuracy: {overall_accuracy:.0f}%")
 
 if __name__ == "__main__":
     main()
